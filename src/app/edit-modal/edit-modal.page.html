@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Editar Producto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-label position="floating">Nombre</ion-label>
+  <ion-input #nom placeholder={{temp.name}}> </ion-input>
+
+  <ion-label position="floating">Id</ion-label>
+  <ion-input #id placeholder={{temp.id}}> </ion-input>
+
+  <ion-label position="floating">Descripcion</ion-label>
+  <ion-input #desc placeholder={{temp.description}}> </ion-input>
+
+  <ion-label position="floating">Precio</ion-label>
+  <ion-input #prec placeholder={{temp.price}}> </ion-input>
+
+  <ion-label position="floating">Categoria</ion-label>
+  <ion-input #cat placeholder={{temp.category}}> </ion-input>
+
+  <ion-label position="floating">Disponibilidad</ion-label>
+  <ion-input #av placeholder={{temp.availability}}> </ion-input>
+
+  <ion-button (click)="update(nom, id,desc,prec,cat, av)" expand="block" color="primary">Actualizar</ion-button>
+
+</ion-content>

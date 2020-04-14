@@ -1,20 +1,48 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Inventory App
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-searchbar #sbar (ionInput)="search(sbar)">
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+</ion-searchbar>
+
+<ion-content [fullscreen]="false">
+
+
+  <!-- Lista de productos -->
+  <ion-list>
+    <ion-card *ngFor="let item of productos, let i = index">
+      <ion-card-header>
+        <ion-card-title> {{item.name}} </ion-card-title>
+        <ion-card-subtitle> Precio : {{item.price}} </ion-card-subtitle>
+        <ion-card-subtitle> ID : {{item.id}} </ion-card-subtitle>
+        <ion-card-subtitle> Categoria : {{item.category}} </ion-card-subtitle>
+        <ion-card-subtitle> Disponibilidad : {{item.availability}} </ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        Descripción : {{item.name}}
+        
+        <ion-button horizontal="end" (click)="Modal(i)">
+          <ion-icon name="ellipsis-horizontal-outline"> </ion-icon>
+        </ion-button>
+
+        <ion-button color="danger" horizontal="end" (click)="dl(i)">
+          <ion-icon name="trash-outline"></ion-icon>
+        </ion-button>
+
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+
+  <!-- Boton de agregar -->
+  <ion-fab vertical="bottom" horizontal="end">
+    <ion-fab-button (click)="addModal()">
+      <ion-icon name="add-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
 </ion-content>

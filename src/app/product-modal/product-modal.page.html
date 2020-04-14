@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Producto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-label position="floating">Nombre</ion-label>
+  <ion-input #nom>{{item.name}}</ion-input>
+
+  <ion-label position="floating">Id</ion-label>
+  <ion-input #id>{{item.id}}</ion-input>
+
+  <ion-label position="floating">Descripcion</ion-label>
+  <ion-input #desc> {{item.description}}</ion-input>
+
+  <ion-label position="floating">Precio</ion-label>
+  <ion-input #prec>{{item.price}} </ion-input>
+
+  <ion-label position="floating">Categoria</ion-label>
+  <ion-input #cat> {{item.category}}</ion-input>
+
+  <ion-label position="floating">Availability</ion-label>
+  <ion-input #cat> {{item.availability}}</ion-input>
+</ion-content>

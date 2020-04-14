@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Agregar Producto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-label position="floating">Nombre</ion-label>
+  <ion-input #nom> </ion-input>
+
+  <ion-label position="floating">Id</ion-label>
+  <ion-input #id> </ion-input>
+
+  <ion-label position="floating">Descripcion</ion-label>
+  <ion-input #desc> </ion-input>
+
+  <ion-label position="floating">Precio</ion-label>
+  <ion-input #prec> </ion-input>
+
+  <ion-label position="floating">Categoria</ion-label>
+  <ion-input #cat> </ion-input>
+
+
+  <ion-button (click)="add(nom, id,desc,prec,cat)" expand="block" color="primary">Agregar</ion-button>
+
+</ion-content>
